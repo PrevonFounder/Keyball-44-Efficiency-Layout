@@ -3,8 +3,8 @@
 
 param(
     [string]$CommitMessage = "",
-    [switch]$CommitOnly,  # Ctrl+Shift+S mode: just commit, don't download
-    [switch]$DownloadOnly # Ctrl+Shift+D mode: just download, assume already committed
+    [switch]$CommitOnly,
+    [switch]$DownloadOnly
 )
 
 # Configuration - Update these paths as needed
@@ -74,93 +74,133 @@ if ($DownloadOnly) {
     
     goto :DownloadArtifact
 }
-# Generate AI commit message using git diff analysis
+
+# ==========================================
+# POPUP COMMIT MESSAGE INPUT (Windows Forms)
+# ==========================================
 if ([string]::IsNullOrWhiteSpace($CommitMessage)) {
-    Write-Host "Analyzing changes for commit message..."
-    
-    # Get all changes (staged + unstaged)
+    # Gather changed files info
     $stagedFiles = git diff --staged --name-only 2>&1
     $unstagedFiles = git diff --name-only 2>&1
-    
-    # Combine all changed files
     $allFiles = @()
     if ($stagedFiles) { $allFiles += ($stagedFiles -split "`n" | Where-Object { $_ -ne "" }) }
     if ($unstagedFiles) { $allFiles += ($unstagedFiles -split "`n" | Where-Object { $_ -ne "" }) }
     $allFiles = $allFiles | Select-Object -Unique
     
-    if ($allFiles.Count -eq 0) {
-        $CommitMessage = "Update firmware configuration"
+    # Build changed files display text
+    $filesInfo = ""
+    if ($allFiles.Count -gt 0) {
+        $filesInfo = "Changed files ($($allFiles.Count)):`n"
+        foreach ($f in $allFiles) { $filesInfo += "  $f`n" }
     } else {
-        # Get the actual diff content for smart analysis
-        $diffContent = git diff --staged 2>&1
-        if (-not $diffContent) { $diffContent = git diff 2>&1 }
-        
-        # Analyze the diff to determine what changed
-        $changeDescription = ""
-        
-        # Check for specific patterns in the diff
-        if ($diffContent -match "DTgid|DT\(KC\)") {
-            $changeDescription = "Update key assignments"
-        }
-        if ($diffContent -match "MO\(|TG\(|OSL\(") {
-            $changeDescription += " layer changes"
-        }
-        if ($diffContent -match "&keyball") {
-            $changeDescription += " keyball settings"
-        }
-        if ($diffContent -match "TAP_DANCE|MT\(") {
-            $changeDescription += " tap/hold mods"
-        }
-        if ($diffContent -match "&bt BT_") {
-            $changeDescription += " bluetooth config"
-        }
-        
-        # Determine primary change type from file names
-        $keymapFiles = $allFiles | Where-Object { $_ -match "keymap" }
-        $configFiles = $allFiles | Where-Object { $_ -match "\.conf$|\.yaml$|\.yml$|\.overlay$" }
-        $devFiles = $allFiles | Where-Object { $_ -match "build\.yaml|\.ps1$|build\.yml" }
-        
-        if ($devFiles) {
-            $CommitMessage = "Update build system"
-        } elseif ($keymapFiles -and $configFiles) {
-            if ($changeDescription) {
-                $CommitMessage = "Update layout $changeDescription"
-            } else {
-                $CommitMessage = "Update keyboard configuration and keymap"
-            }
-        } elseif ($keymapFiles) {
-            if ($changeDescription) {
-                $CommitMessage = "Update keymap $changeDescription"
-            } else {
-                $CommitMessage = "Update keymap layout"
-            }
-        } elseif ($configFiles) {
-            if ($changeDescription) {
-                $CommitMessage = "Update config $changeDescription"
-            } else {
-                $CommitMessage = "Update keyboard configuration"
-            }
-        } else {
-            $CommitMessage = "Update source files"
-        }
-        
-        # Add smart suffix based on diff size
-        $linesAdded = ([regex]::Matches($diffContent, "^\+[^+]" , [System.Text.RegularExpressions.RegexOptions]::Multiline)).Count
-        $linesRemoved = ([regex]::Matches($diffContent, "^-[^-]" , [System.Text.RegularExpressions.RegexOptions]::Multiline)).Count
-        
-        if ($linesAdded -gt 50 -or $linesRemoved -gt 30) {
-            $CommitMessage += " [major]"
-        } elseif ($linesAdded -gt 20 -or $linesRemoved -gt 15) {
-            $CommitMessage += " [minor]"
-        }
+        $filesInfo = "No changes detected"
     }
     
-    # Add timestamp to avoid duplicate commits
-    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm"
-    $CommitMessage = "$CommitMessage [$timestamp]"
+    # Load Windows Forms assembly
+    Add-Type -AssemblyName System.Windows.Forms
+    Add-Type -AssemblyName System.Drawing
     
-    Write-Host "AI-generated commit: $CommitMessage"
-    Write-Host "Changed files: $($allFiles.Count)"
+    # Create form
+    $form = New-Object System.Windows.Forms.Form
+    $form.Text = "Commit Message"
+    $form.Size = New-Object System.Drawing.Size(600, 320)
+    $form.StartPosition = "CenterScreen"
+    $form.FormBorderStyle = "FixedDialog"
+    $form.MaximizeBox = $false
+    $form.MinimizeBox = $false
+    $form.TopMost = $true
+    
+    # Title label
+    $titleLabel = New-Object System.Windows.Forms.Label
+    $titleLabel.Location = New-Object System.Drawing.Point(15, 15)
+    $titleLabel.Size = New-Object System.Drawing.Size(555, 25)
+    $titleLabel.Text = "Enter commit message (Ctrl+Enter or Enter to submit):"
+    $titleLabel.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
+    $form.Controls.Add($titleLabel)
+    
+    # Changed files info label
+    $filesLabel = New-Object System.Windows.Forms.Label
+    $filesLabel.Location = New-Object System.Drawing.Point(15, 45)
+    $filesLabel.Size = New-Object System.Drawing.Size(555, 60)
+    $filesLabel.Text = $filesInfo
+    $filesLabel.Font = New-Object System.Drawing.Font("Consolas", 9)
+    $filesLabel.ForeColor = [System.Drawing.Color]::FromArgb(100, 100, 100)
+    $form.Controls.Add($filesLabel)
+    
+    # TextBox for commit message
+    $textBox = New-Object System.Windows.Forms.TextBox
+    $textBox.Location = New-Object System.Drawing.Point(15, 110)
+    $textBox.Size = New-Object System.Drawing.Size(555, 100)
+    $textBox.Multiline = $true
+    $textBox.ScrollBars = "Vertical"
+    $textBox.Font = New-Object System.Drawing.Font("Segoe UI", 11)
+    $textBox.AcceptsReturn = $true
+    $textBox.AcceptsTab = $false
+    $textBox.WordWrap = $true
+    $textBox.Text = ""
+    $textBox.Add_KeyDown({
+        param($sender, $e)
+        # Ctrl+Enter or Enter submits
+        if (($e.KeyCode -eq "Return" -and $_.Modifiers -eq "Control") -or $e.KeyCode -eq "Return") {
+            $script:dialogResult = [System.Windows.Forms.DialogResult]::OK
+            $form.Close()
+        }
+    })
+    $form.Controls.Add($textBox)
+    
+    # Hint label
+    $hintLabel = New-Object System.Windows.Forms.Label
+    $hintLabel.Location = New-Object System.Drawing.Point(15, 215)
+    $hintLabel.Size = New-Object System.Drawing.Size(555, 20)
+    $hintLabel.Text = "Press Ctrl+Enter, Enter, or click Submit to commit"
+    $hintLabel.ForeColor = [System.Drawing.Color]::FromArgb(130, 130, 130)
+    $form.Controls.Add($hintLabel)
+    
+    # Submit button
+    $submitButton = New-Object System.Windows.Forms.Button
+    $submitButton.Location = New-Object System.Drawing.Point(435, 240)
+    $submitButton.Size = New-Object System.Drawing.Size(135, 35)
+    $submitButton.Text = "Submit"
+    $submitButton.Font = New-Object System.Drawing.Font("Segoe UI", 10, [System.Drawing.FontStyle]::Bold)
+    $submitButton.BackColor = [System.Drawing.Color]::FromArgb(46, 125, 50)
+    $submitButton.ForeColor = [System.Drawing.Color]::White
+    $submitButton.FlatStyle = "Flat"
+    $submitButton.Add_Click({
+        $script:dialogResult = [System.Windows.Forms.DialogResult]::OK
+        $form.Close()
+    })
+    $form.Controls.Add($submitButton)
+    
+    # Cancel button
+    $cancelButton = New-Object System.Windows.Forms.Button
+    $cancelButton.Location = New-Object System.Drawing.Point(295, 240)
+    $cancelButton.Size = New-Object System.Drawing.Size(135, 35)
+    $cancelButton.Text = "Cancel"
+    $cancelButton.Font = New-Object System.Drawing.Font("Segoe UI", 10)
+    $cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+    $form.Controls.Add($cancelButton)
+    
+    # Set form's CancelButton
+    $form.CancelButton = $cancelButton
+    
+    # Initialize dialog result
+    $script:dialogResult = [System.Windows.Forms.DialogResult]::Cancel
+    
+    # Show form and focus the textbox
+    $form.Add_Shown({ $textBox.Focus() })
+    $result = $form.ShowDialog()
+    
+    # Get the commit message
+    $CommitMessage = $textBox.Text.Trim()
+    
+    # If cancelled or empty, use default
+    if ([string]::IsNullOrWhiteSpace($CommitMessage) -or $dialogResult -eq [System.Windows.Forms.DialogResult]::Cancel) {
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm"
+        $CommitMessage = "Update firmware [$timestamp]"
+        Write-Host "Using default: $CommitMessage"
+    } else {
+        Write-Host "Commit message: $CommitMessage"
+    }
 }
 
 # Verify GitHub CLI exists
