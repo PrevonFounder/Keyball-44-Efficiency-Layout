@@ -382,35 +382,43 @@ if ($artifacts -and $artifacts.artifacts) {
     $firmwareArtifact = $artifacts.artifacts | Where-Object { $_.name -like "*firmware*" } | Select-Object -First 1
     if ($firmwareArtifact) {
         Write-Host "Found artifact: $($firmwareArtifact.name) (ID: $($firmwareArtifact.id))"
-        $zipPath = Join-Path $buildFolder "firmware.zip"
-        Write-Host "Downloading artifact to $zipPath using gh api..."
+        Write-Host "Downloading artifact to $buildFolder using gh run download..."
         
-        # Use gh api to download with proper authentication
-        # The -H Accept header and -o output are critical for binary artifacts
-        & $GhExePath api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" `
-            "repos/opriflooperations/Keyball-44-Efficiency-Layout/actions/artifacts/$($firmwareArtifact.id)/zip" `
-            -o $zipPath 2>&1
+        # Use gh run download which handles artifact download properly
+        # Must be run from repo directory for gh to work
+        Push-Location -Path $RepoPath
+        & $GhExePath run download $runDbId --name firmware --dir $buildFolder 2>&1 | Out-Null
+        $exitCode = $LASTEXITCODE
+        Pop-Location
         
-        # Wait for download to complete
-        $maxDownloadWait = 60
-        $downloaded = 0
-        while ($downloaded -lt $maxDownloadWait -and (-not (Test-Path $zipPath) -or (Get-Item $zipPath).Length -lt 1000)) {
-            Start-Sleep -Seconds 1
-            $downloaded++
+        if ($exitCode -ne 0) {
+            Write-Host "ERROR: gh run download failed with exit code $exitCode"
         }
         
-        if (Test-Path $zipPath) {
-            $fileSize = (Get-Item $zipPath).Length
-            Write-Host "Download complete. Size: $fileSize bytes"
-            if ($fileSize -lt 1000) {
-                Write-Host "WARNING: File seems too small, checking contents..."
-                $content = Get-Content $zipPath -Raw -ErrorAction SilentlyContinue
-                if ($content -and $content.Length -lt 500) {
-                    Write-Host "Download appears to be text (likely error): $content"
+        # Wait for files to appear
+        $maxWait = 30
+        $waited = 0
+        $expectedFiles = @("keyball44_left-nice_nano_v2-zmk.uf2", "keyball44_right-nice_nano_v2-zmk.uf2")
+        $allFound = $false
+        
+        while ($waited -lt $maxWait -and -not $allFound) {
+            Start-Sleep -Seconds 1
+            $waited++
+            $allFound = $true
+            foreach ($expected in $expectedFiles) {
+                $found = Get-ChildItem -Path $buildFolder -Filter $expected -ErrorAction SilentlyContinue
+                if (-not $found) {
+                    $allFound = $false
+                    break
                 }
             }
-        } else {
-            Write-Host "ERROR: Download failed"
+            if (-not $allFound) {
+                Write-Host "  Waiting for download... ($waited seconds)"
+            }
+        }
+        
+        if ($allFound) {
+            Write-Host "Download complete ($waited seconds)."
         }
     } else {
         Write-Host "ERROR: No firmware artifact found with correct name pattern"
@@ -426,19 +434,16 @@ if ($artifacts -and $artifacts.artifacts) {
         
         # Get the first artifact (which should be the firmware zip)
         $firstArtifact = $allArtifacts.artifacts[0]
-        $zipPath = Join-Path $buildFolder "firmware.zip"
-        Write-Host "Downloading first artifact: $($firstArtifact.name) using gh api..."
+        Write-Host "Downloading first artifact: $($firstArtifact.name) using gh run download..."
         
-        # Use gh api to download with proper authentication
-        & $GhExePath api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" `
-            "repos/opriflooperations/Keyball-44-Efficiency-Layout/actions/artifacts/$($firstArtifact.id)/zip" `
-            -o $zipPath 2>&1
+        # Use gh run download for artifact download
+        Push-Location -Path $RepoPath
+        & $GhExePath run download $runDbId --name $firstArtifact.name --dir $buildFolder 2>&1 | Out-Null
+        $exitCode = $LASTEXITCODE
+        Pop-Location
         
-        $maxDownloadWait = 60
-        $downloaded = 0
-        while ($downloaded -lt $maxDownloadWait -and (-not (Test-Path $zipPath) -or (Get-Item $zipPath).Length -lt 1000)) {
-            Start-Sleep -Seconds 1
-            $downloaded++
+        if ($exitCode -ne 0) {
+            Write-Host "ERROR: gh run download failed with exit code $exitCode"
         }
     } else {
         Write-Host "ERROR: No artifacts found for this run"
