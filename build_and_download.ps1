@@ -2,7 +2,9 @@
 # This script builds the ZMK firmware and downloads it to the Keyball44
 
 param(
-    [string]$CommitMessage = ""
+    [string]$CommitMessage = "",
+    [switch]$CommitOnly,  # Ctrl+Shift+S mode: just commit, don't download
+    [switch]$DownloadOnly # Ctrl+Shift+D mode: just download, assume already committed
 )
 
 # Configuration - Update these paths as needed
@@ -15,6 +17,63 @@ $GhExePath = "C:\Program Files\GitHub CLI\gh.exe"
 # Starting version for smart versioning
 $StartingVersion = 82
 
+Write-Host "=========================================="
+Write-Host "Keyball44 Firmware Build Script"
+Write-Host "=========================================="
+if ($CommitOnly) {
+    Write-Host "Mode: COMMIT ONLY (Ctrl+Shift+S)"
+} elseif ($DownloadOnly) {
+    Write-Host "Mode: DOWNLOAD ONLY (Ctrl+Shift+D)"
+} else {
+    Write-Host "Mode: COMMIT + DOWNLOAD (full workflow)"
+}
+Write-Host ""
+Write-Host ""
+
+# ==========================================
+# DOWNLOAD-ONLY MODE: Skip commit, get latest build
+# ==========================================
+if ($DownloadOnly) {
+    Write-Host "Mode: DOWNLOAD ONLY - Finding latest completed workflow..."
+    
+    # Verify GitHub CLI exists
+    if (-not (Test-Path $GhExePath)) {
+        Write-Host "ERROR: GitHub CLI not found at: $GhExePath"
+        exit 1
+    }
+    
+    # Change to repository directory
+    Set-Location -Path $RepoPath
+    
+    # Get the latest successful workflow run
+    Write-Host "Finding latest completed workflow..."
+    $rawOutput = & $GhExePath run list --workflow build.yml --limit 5 --json name,status,conclusion,databaseId,headSha 2>&1
+    
+    if ([string]::IsNullOrWhiteSpace($rawOutput)) {
+        Write-Host "ERROR: Could not get workflow runs"
+        exit 1
+    }
+    
+    $runs = $rawOutput | ConvertFrom-Json
+    $runDbId = $null
+    
+    # Find the first completed/successful run
+    foreach ($run in $runs) {
+        Write-Host "  Run: databaseId=$($run.databaseId), status=$($run.status), conclusion=$($run.conclusion)"
+        if ($run.status -eq "completed" -and $run.conclusion -eq "success") {
+            $runDbId = $run.databaseId
+            Write-Host "  Using latest completed run: $runDbId"
+            break
+        }
+    }
+    
+    if ($null -eq $runDbId) {
+        Write-Host "ERROR: No completed workflow runs found"
+        exit 1
+    }
+    
+    goto :DownloadArtifact
+}
 # Generate AI commit message using git diff analysis
 if ([string]::IsNullOrWhiteSpace($CommitMessage)) {
     Write-Host "Analyzing changes for commit message..."
@@ -212,6 +271,23 @@ Write-Host "Found NEW workflow run to watch: databaseId=$runDbId"
 # Wait for the specific workflow run to complete
 Write-Host "Waiting for workflow run $runDbId to complete..."
 & $GhExePath run watch $runDbId
+
+# ==========================================
+# SKIP DOWNLOAD IF IN COMMIT-ONLY MODE
+# ==========================================
+if ($CommitOnly) {
+    Write-Host ""
+    Write-Host "=== Commit Complete (Ctrl+Shift+S mode) ==="
+    Write-Host "Workflow triggered: $runDbId"
+    Write-Host "Build will complete in GitHub Actions."
+    Write-Host "Press Ctrl+Shift+D to download when ready."
+    exit 0
+}
+
+# ==========================================
+# DOWNLOAD ARTIFACT LABEL (for goto from DownloadOnly mode)
+# ==========================================
+:DownloadArtifact
 
 # ==========================================
 # SMART VERSIONING (v82+)
