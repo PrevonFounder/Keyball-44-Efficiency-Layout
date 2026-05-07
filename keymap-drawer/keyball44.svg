@@ -637,10 +637,10 @@ rect.held, rect.combo.held {
 <text x="280" y="101" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
 <a href="#SNIPE">
-<text x="784" y="112" class="combo tap layer-activator">SNIPE</text>
-</a><text x="784" y="123" class="combo hold">toggle</text>
+<text x="812" y="196" class="combo tap layer-activator">SNIPE</text>
+</a><text x="812" y="207" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-17">
 <path d="M644,148 l-37,2" class="combo"/>
@@ -1132,10 +1132,10 @@ rect.held, rect.combo.held {
 <text x="280" y="101" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
 <a href="#SNIPE">
-<text x="784" y="112" class="combo tap layer-activator">SNIPE</text>
-</a><text x="784" y="123" class="combo hold">toggle</text>
+<text x="812" y="196" class="combo tap layer-activator">SNIPE</text>
+</a><text x="812" y="207" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-17">
 <path d="M644,148 l-37,2" class="combo"/>
@@ -1633,10 +1633,10 @@ rect.held, rect.combo.held {
 <text x="280" y="101" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
 <a href="#SNIPE">
-<text x="784" y="112" class="combo tap layer-activator">SNIPE</text>
-</a><text x="784" y="123" class="combo hold">toggle</text>
+<text x="812" y="196" class="combo tap layer-activator">SNIPE</text>
+</a><text x="812" y="207" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-17">
 <path d="M644,148 l-37,2" class="combo"/>
@@ -2135,10 +2135,10 @@ rect.held, rect.combo.held {
 <text x="280" y="101" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
 <a href="#SNIPE">
-<text x="784" y="112" class="combo tap layer-activator">SNIPE</text>
-</a><text x="784" y="123" class="combo hold">toggle</text>
+<text x="812" y="196" class="combo tap layer-activator">SNIPE</text>
+</a><text x="812" y="207" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-17">
 <path d="M644,148 l-37,2" class="combo"/>
@@ -2632,10 +2632,10 @@ rect.held, rect.combo.held {
 <text x="280" y="101" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
 <a href="#SNIPE">
-<text x="784" y="112" class="combo tap layer-activator">SNIPE</text>
-</a><text x="784" y="123" class="combo hold">toggle</text>
+<text x="812" y="196" class="combo tap layer-activator">SNIPE</text>
+</a><text x="812" y="207" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-17">
 <path d="M644,148 l-37,2" class="combo"/>
@@ -3127,10 +3127,10 @@ rect.held, rect.combo.held {
 <text x="280" y="101" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
 <a href="#SNIPE">
-<text x="784" y="112" class="combo tap layer-activator">SNIPE</text>
-</a><text x="784" y="123" class="combo hold">toggle</text>
+<text x="812" y="196" class="combo tap layer-activator">SNIPE</text>
+</a><text x="812" y="207" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-17">
 <path d="M644,148 l-37,2" class="combo"/>
@@ -3618,10 +3618,10 @@ rect.held, rect.combo.held {
 <text x="280" y="101" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-16">
-<rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="798" y="183" width="28" height="26" class="combo"/>
 <a href="#SNIPE">
-<text x="784" y="112" class="combo tap layer-activator">SNIPE</text>
-</a><text x="784" y="123" class="combo hold">toggle</text>
+<text x="812" y="196" class="combo tap layer-activator">SNIPE</text>
+</a><text x="812" y="207" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-17">
 <path d="M644,148 l-37,2" class="combo"/>

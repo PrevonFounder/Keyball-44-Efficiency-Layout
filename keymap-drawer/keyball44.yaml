@@ -348,7 +348,7 @@ combos:
   k: Ctl+Sft+V
 - p: [17, 16]
   k: Ctl+X
-- p: [22, 23]
+- p: [35, 43]
   k: {t: SNIPE, h: toggle}
 - p: [31, 32, 33]
   k: Alt+$$mdi:keyboard-tab$$
