@@ -117,7 +117,7 @@
 
         Snipe_Layer_Lock {
             bindings = <&tog 6>;
-            key-positions = <22 23>;
+            key-positions = <35 43>;
         };
 
         Window_Right {
