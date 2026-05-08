@@ -245,11 +245,6 @@
             key-positions = <19 20>;
         };
 
-        Doubble_Click_Macro_RH {
-            bindings = <&Double_Click_Macro>;
-            key-positions = <19 18>;
-        };
-
         Shift_Enter {
             bindings = <&kp LS(ENTER)>;
             key-positions = <42 18>;
@@ -287,7 +282,7 @@
 
         Ctrl_A_Select_All {
             bindings = <&kp LC(A)>;
-            key-positions = <8 9>;
+            key-positions = <18 19>;
         };
 
         Layer_Lock_Reset {
