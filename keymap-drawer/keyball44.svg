@@ -758,54 +758,50 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="602" y="77" width="28" height="26" class="combo"/>
 <text x="616" y="90" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-42">
-<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
-<text x="560" y="101" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
-</g>
-<g class="combo enter combopos-43">
+<g class="combo enter combopos-42">
 <path d="M544,180 l9,56" class="combo"/>
 <path d="M544,180 l-9,-56" class="combo"/>
 <rect rx="6" ry="6" x="530" y="167" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="535" y="171" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo enter combopos-44">
+<g class="combo enter combopos-43">
 <path d="M548,209 l34,-96" class="combo"/>
 <path d="M548,209 l-38,53" class="combo"/>
 <rect rx="6" ry="6" x="534" y="196" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="539" y="200" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo combopos-45">
+<g class="combo combopos-44">
 <rect rx="6" ry="6" x="154" y="22" width="28" height="26" class="combo"/>
 <text x="168" y="35" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-46">
+<g class="combo combopos-45">
 <rect rx="6" ry="6" x="154" y="78" width="28" height="26" class="combo"/>
 <text x="168" y="91" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
 </g>
-<g class="combo combopos-47">
+<g class="combo combopos-46">
 <rect rx="6" ry="6" x="770" y="43" width="28" height="26" class="combo"/>
 <text x="784" y="56" class="combo tap">Gui+L</text>
 </g>
-<g class="combo combopos-48">
+<g class="combo combopos-47">
 <rect rx="6" ry="6" x="742" y="127" width="28" height="26" class="combo"/>
 <text x="756" y="140" class="combo tap">Ctl+V</text>
 </g>
-<g class="combo combopos-49">
+<g class="combo combopos-48">
 <rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
 <text x="784" y="112" class="combo tap">Ctl+C</text>
 </g>
-<g class="combo combopos-50">
-<rect rx="6" ry="6" x="658" y="22" width="28" height="26" class="combo"/>
-<text x="672" y="35" class="combo tap">Ctl+A</text>
+<g class="combo combopos-49">
+<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
+<text x="560" y="101" class="combo tap">Ctl+A</text>
 </g>
-<g class="combo combopos-51">
+<g class="combo combopos-50">
 <rect rx="6" ry="6" x="546" y="32" width="28" height="26" class="combo"/>
 <text x="560" y="45" class="combo tap">
 <tspan x="560" dy="-0.6em">CMK-DH</tspan><tspan x="560" dy="1.2em">+</tspan>
 </text>
 <text x="560" y="56" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-52">
+<g class="combo combopos-51">
 <rect rx="6" ry="6" x="546" y="144" width="28" height="26" class="combo"/>
 <text x="560" y="157" class="combo tap"><tspan style="font-size: 60%">&amp;Doubble_…</tspan></text>
 </g>
@@ -1257,54 +1253,50 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="602" y="77" width="28" height="26" class="combo"/>
 <text x="616" y="90" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-42">
-<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
-<text x="560" y="101" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
-</g>
-<g class="combo enter combopos-43">
+<g class="combo enter combopos-42">
 <path d="M544,180 l9,56" class="combo"/>
 <path d="M544,180 l-9,-56" class="combo"/>
 <rect rx="6" ry="6" x="530" y="167" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="535" y="171" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo enter combopos-44">
+<g class="combo enter combopos-43">
 <path d="M548,209 l34,-96" class="combo"/>
 <path d="M548,209 l-38,53" class="combo"/>
 <rect rx="6" ry="6" x="534" y="196" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="539" y="200" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo combopos-45">
+<g class="combo combopos-44">
 <rect rx="6" ry="6" x="154" y="22" width="28" height="26" class="combo"/>
 <text x="168" y="35" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-46">
+<g class="combo combopos-45">
 <rect rx="6" ry="6" x="154" y="78" width="28" height="26" class="combo"/>
 <text x="168" y="91" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
 </g>
-<g class="combo combopos-47">
+<g class="combo combopos-46">
 <rect rx="6" ry="6" x="770" y="43" width="28" height="26" class="combo"/>
 <text x="784" y="56" class="combo tap">Gui+L</text>
 </g>
-<g class="combo combopos-48">
+<g class="combo combopos-47">
 <rect rx="6" ry="6" x="742" y="127" width="28" height="26" class="combo"/>
 <text x="756" y="140" class="combo tap">Ctl+V</text>
 </g>
-<g class="combo combopos-49">
+<g class="combo combopos-48">
 <rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
 <text x="784" y="112" class="combo tap">Ctl+C</text>
 </g>
-<g class="combo combopos-50">
-<rect rx="6" ry="6" x="658" y="22" width="28" height="26" class="combo"/>
-<text x="672" y="35" class="combo tap">Ctl+A</text>
+<g class="combo combopos-49">
+<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
+<text x="560" y="101" class="combo tap">Ctl+A</text>
 </g>
-<g class="combo combopos-51">
+<g class="combo combopos-50">
 <rect rx="6" ry="6" x="546" y="32" width="28" height="26" class="combo"/>
 <text x="560" y="45" class="combo tap">
 <tspan x="560" dy="-0.6em">CMK-DH</tspan><tspan x="560" dy="1.2em">+</tspan>
 </text>
 <text x="560" y="56" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-52">
+<g class="combo combopos-51">
 <rect rx="6" ry="6" x="546" y="144" width="28" height="26" class="combo"/>
 <text x="560" y="157" class="combo tap"><tspan style="font-size: 60%">&amp;Doubble_…</tspan></text>
 </g>
@@ -1762,54 +1754,50 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="602" y="77" width="28" height="26" class="combo"/>
 <text x="616" y="90" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-42">
-<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
-<text x="560" y="101" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
-</g>
-<g class="combo enter combopos-43">
+<g class="combo enter combopos-42">
 <path d="M544,180 l9,56" class="combo"/>
 <path d="M544,180 l-9,-56" class="combo"/>
 <rect rx="6" ry="6" x="530" y="167" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="535" y="171" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo enter combopos-44">
+<g class="combo enter combopos-43">
 <path d="M548,209 l34,-96" class="combo"/>
 <path d="M548,209 l-38,53" class="combo"/>
 <rect rx="6" ry="6" x="534" y="196" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="539" y="200" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo combopos-45">
+<g class="combo combopos-44">
 <rect rx="6" ry="6" x="154" y="22" width="28" height="26" class="combo"/>
 <text x="168" y="35" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-46">
+<g class="combo combopos-45">
 <rect rx="6" ry="6" x="154" y="78" width="28" height="26" class="combo"/>
 <text x="168" y="91" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
 </g>
-<g class="combo combopos-47">
+<g class="combo combopos-46">
 <rect rx="6" ry="6" x="770" y="43" width="28" height="26" class="combo"/>
 <text x="784" y="56" class="combo tap">Gui+L</text>
 </g>
-<g class="combo combopos-48">
+<g class="combo combopos-47">
 <rect rx="6" ry="6" x="742" y="127" width="28" height="26" class="combo"/>
 <text x="756" y="140" class="combo tap">Ctl+V</text>
 </g>
-<g class="combo combopos-49">
+<g class="combo combopos-48">
 <rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
 <text x="784" y="112" class="combo tap">Ctl+C</text>
 </g>
-<g class="combo combopos-50">
-<rect rx="6" ry="6" x="658" y="22" width="28" height="26" class="combo"/>
-<text x="672" y="35" class="combo tap">Ctl+A</text>
+<g class="combo combopos-49">
+<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
+<text x="560" y="101" class="combo tap">Ctl+A</text>
 </g>
-<g class="combo combopos-51">
+<g class="combo combopos-50">
 <rect rx="6" ry="6" x="546" y="32" width="28" height="26" class="combo"/>
 <text x="560" y="45" class="combo tap">
 <tspan x="560" dy="-0.6em">CMK-DH</tspan><tspan x="560" dy="1.2em">+</tspan>
 </text>
 <text x="560" y="56" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-52">
+<g class="combo combopos-51">
 <rect rx="6" ry="6" x="546" y="144" width="28" height="26" class="combo"/>
 <text x="560" y="157" class="combo tap"><tspan style="font-size: 60%">&amp;Doubble_…</tspan></text>
 </g>
@@ -2268,54 +2256,50 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="602" y="77" width="28" height="26" class="combo"/>
 <text x="616" y="90" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-42">
-<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
-<text x="560" y="101" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
-</g>
-<g class="combo enter combopos-43">
+<g class="combo enter combopos-42">
 <path d="M544,180 l9,56" class="combo"/>
 <path d="M544,180 l-9,-56" class="combo"/>
 <rect rx="6" ry="6" x="530" y="167" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="535" y="171" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo enter combopos-44">
+<g class="combo enter combopos-43">
 <path d="M548,209 l34,-96" class="combo"/>
 <path d="M548,209 l-38,53" class="combo"/>
 <rect rx="6" ry="6" x="534" y="196" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="539" y="200" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo combopos-45">
+<g class="combo combopos-44">
 <rect rx="6" ry="6" x="154" y="22" width="28" height="26" class="combo"/>
 <text x="168" y="35" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-46">
+<g class="combo combopos-45">
 <rect rx="6" ry="6" x="154" y="78" width="28" height="26" class="combo"/>
 <text x="168" y="91" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
 </g>
-<g class="combo combopos-47">
+<g class="combo combopos-46">
 <rect rx="6" ry="6" x="770" y="43" width="28" height="26" class="combo"/>
 <text x="784" y="56" class="combo tap">Gui+L</text>
 </g>
-<g class="combo combopos-48">
+<g class="combo combopos-47">
 <rect rx="6" ry="6" x="742" y="127" width="28" height="26" class="combo"/>
 <text x="756" y="140" class="combo tap">Ctl+V</text>
 </g>
-<g class="combo combopos-49">
+<g class="combo combopos-48">
 <rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
 <text x="784" y="112" class="combo tap">Ctl+C</text>
 </g>
-<g class="combo combopos-50">
-<rect rx="6" ry="6" x="658" y="22" width="28" height="26" class="combo"/>
-<text x="672" y="35" class="combo tap">Ctl+A</text>
+<g class="combo combopos-49">
+<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
+<text x="560" y="101" class="combo tap">Ctl+A</text>
 </g>
-<g class="combo combopos-51">
+<g class="combo combopos-50">
 <rect rx="6" ry="6" x="546" y="32" width="28" height="26" class="combo"/>
 <text x="560" y="45" class="combo tap">
 <tspan x="560" dy="-0.6em">CMK-DH</tspan><tspan x="560" dy="1.2em">+</tspan>
 </text>
 <text x="560" y="56" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-52">
+<g class="combo combopos-51">
 <rect rx="6" ry="6" x="546" y="144" width="28" height="26" class="combo"/>
 <text x="560" y="157" class="combo tap"><tspan style="font-size: 60%">&amp;Doubble_…</tspan></text>
 </g>
@@ -2769,54 +2753,50 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="602" y="77" width="28" height="26" class="combo"/>
 <text x="616" y="90" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-42">
-<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
-<text x="560" y="101" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
-</g>
-<g class="combo enter combopos-43">
+<g class="combo enter combopos-42">
 <path d="M544,180 l9,56" class="combo"/>
 <path d="M544,180 l-9,-56" class="combo"/>
 <rect rx="6" ry="6" x="530" y="167" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="535" y="171" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo enter combopos-44">
+<g class="combo enter combopos-43">
 <path d="M548,209 l34,-96" class="combo"/>
 <path d="M548,209 l-38,53" class="combo"/>
 <rect rx="6" ry="6" x="534" y="196" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="539" y="200" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo combopos-45">
+<g class="combo combopos-44">
 <rect rx="6" ry="6" x="154" y="22" width="28" height="26" class="combo"/>
 <text x="168" y="35" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-46">
+<g class="combo combopos-45">
 <rect rx="6" ry="6" x="154" y="78" width="28" height="26" class="combo"/>
 <text x="168" y="91" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
 </g>
-<g class="combo combopos-47">
+<g class="combo combopos-46">
 <rect rx="6" ry="6" x="770" y="43" width="28" height="26" class="combo"/>
 <text x="784" y="56" class="combo tap">Gui+L</text>
 </g>
-<g class="combo combopos-48">
+<g class="combo combopos-47">
 <rect rx="6" ry="6" x="742" y="127" width="28" height="26" class="combo"/>
 <text x="756" y="140" class="combo tap">Ctl+V</text>
 </g>
-<g class="combo combopos-49">
+<g class="combo combopos-48">
 <rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
 <text x="784" y="112" class="combo tap">Ctl+C</text>
 </g>
-<g class="combo combopos-50">
-<rect rx="6" ry="6" x="658" y="22" width="28" height="26" class="combo"/>
-<text x="672" y="35" class="combo tap">Ctl+A</text>
+<g class="combo combopos-49">
+<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
+<text x="560" y="101" class="combo tap">Ctl+A</text>
 </g>
-<g class="combo combopos-51">
+<g class="combo combopos-50">
 <rect rx="6" ry="6" x="546" y="32" width="28" height="26" class="combo"/>
 <text x="560" y="45" class="combo tap">
 <tspan x="560" dy="-0.6em">CMK-DH</tspan><tspan x="560" dy="1.2em">+</tspan>
 </text>
 <text x="560" y="56" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-52">
+<g class="combo combopos-51">
 <rect rx="6" ry="6" x="546" y="144" width="28" height="26" class="combo"/>
 <text x="560" y="157" class="combo tap"><tspan style="font-size: 60%">&amp;Doubble_…</tspan></text>
 </g>
@@ -3268,54 +3248,50 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="602" y="77" width="28" height="26" class="combo"/>
 <text x="616" y="90" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-42">
-<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
-<text x="560" y="101" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
-</g>
-<g class="combo enter combopos-43">
+<g class="combo enter combopos-42">
 <path d="M544,180 l9,56" class="combo"/>
 <path d="M544,180 l-9,-56" class="combo"/>
 <rect rx="6" ry="6" x="530" y="167" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="535" y="171" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo enter combopos-44">
+<g class="combo enter combopos-43">
 <path d="M548,209 l34,-96" class="combo"/>
 <path d="M548,209 l-38,53" class="combo"/>
 <rect rx="6" ry="6" x="534" y="196" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="539" y="200" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo combopos-45">
+<g class="combo combopos-44">
 <rect rx="6" ry="6" x="154" y="22" width="28" height="26" class="combo"/>
 <text x="168" y="35" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-46">
+<g class="combo combopos-45">
 <rect rx="6" ry="6" x="154" y="78" width="28" height="26" class="combo"/>
 <text x="168" y="91" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
 </g>
-<g class="combo combopos-47">
+<g class="combo combopos-46">
 <rect rx="6" ry="6" x="770" y="43" width="28" height="26" class="combo"/>
 <text x="784" y="56" class="combo tap">Gui+L</text>
 </g>
-<g class="combo combopos-48">
+<g class="combo combopos-47">
 <rect rx="6" ry="6" x="742" y="127" width="28" height="26" class="combo"/>
 <text x="756" y="140" class="combo tap">Ctl+V</text>
 </g>
-<g class="combo combopos-49">
+<g class="combo combopos-48">
 <rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
 <text x="784" y="112" class="combo tap">Ctl+C</text>
 </g>
-<g class="combo combopos-50">
-<rect rx="6" ry="6" x="658" y="22" width="28" height="26" class="combo"/>
-<text x="672" y="35" class="combo tap">Ctl+A</text>
+<g class="combo combopos-49">
+<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
+<text x="560" y="101" class="combo tap">Ctl+A</text>
 </g>
-<g class="combo combopos-51">
+<g class="combo combopos-50">
 <rect rx="6" ry="6" x="546" y="32" width="28" height="26" class="combo"/>
 <text x="560" y="45" class="combo tap">
 <tspan x="560" dy="-0.6em">CMK-DH</tspan><tspan x="560" dy="1.2em">+</tspan>
 </text>
 <text x="560" y="56" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-52">
+<g class="combo combopos-51">
 <rect rx="6" ry="6" x="546" y="144" width="28" height="26" class="combo"/>
 <text x="560" y="157" class="combo tap"><tspan style="font-size: 60%">&amp;Doubble_…</tspan></text>
 </g>
@@ -3763,54 +3739,50 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="602" y="77" width="28" height="26" class="combo"/>
 <text x="616" y="90" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-42">
-<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
-<text x="560" y="101" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
-</g>
-<g class="combo enter combopos-43">
+<g class="combo enter combopos-42">
 <path d="M544,180 l9,56" class="combo"/>
 <path d="M544,180 l-9,-56" class="combo"/>
 <rect rx="6" ry="6" x="530" y="167" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="535" y="171" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo enter combopos-44">
+<g class="combo enter combopos-43">
 <path d="M548,209 l34,-96" class="combo"/>
 <path d="M548,209 l-38,53" class="combo"/>
 <rect rx="6" ry="6" x="534" y="196" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="539" y="200" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
-<g class="combo combopos-45">
+<g class="combo combopos-44">
 <rect rx="6" ry="6" x="154" y="22" width="28" height="26" class="combo"/>
 <text x="168" y="35" class="combo tap"><tspan style="font-size: 60%">&amp;Tripple_…</tspan></text>
 </g>
-<g class="combo combopos-46">
+<g class="combo combopos-45">
 <rect rx="6" ry="6" x="154" y="78" width="28" height="26" class="combo"/>
 <text x="168" y="91" class="combo tap"><tspan style="font-size: 60%">&amp;Double_C…</tspan></text>
 </g>
-<g class="combo combopos-47">
+<g class="combo combopos-46">
 <rect rx="6" ry="6" x="770" y="43" width="28" height="26" class="combo"/>
 <text x="784" y="56" class="combo tap">Gui+L</text>
 </g>
-<g class="combo combopos-48">
+<g class="combo combopos-47">
 <rect rx="6" ry="6" x="742" y="127" width="28" height="26" class="combo"/>
 <text x="756" y="140" class="combo tap">Ctl+V</text>
 </g>
-<g class="combo combopos-49">
+<g class="combo combopos-48">
 <rect rx="6" ry="6" x="770" y="99" width="28" height="26" class="combo"/>
 <text x="784" y="112" class="combo tap">Ctl+C</text>
 </g>
-<g class="combo combopos-50">
-<rect rx="6" ry="6" x="658" y="22" width="28" height="26" class="combo"/>
-<text x="672" y="35" class="combo tap">Ctl+A</text>
+<g class="combo combopos-49">
+<rect rx="6" ry="6" x="546" y="88" width="28" height="26" class="combo"/>
+<text x="560" y="101" class="combo tap">Ctl+A</text>
 </g>
-<g class="combo combopos-51">
+<g class="combo combopos-50">
 <rect rx="6" ry="6" x="546" y="32" width="28" height="26" class="combo"/>
 <text x="560" y="45" class="combo tap">
 <tspan x="560" dy="-0.6em">CMK-DH</tspan><tspan x="560" dy="1.2em">+</tspan>
 </text>
 <text x="560" y="56" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-52">
+<g class="combo combopos-51">
 <rect rx="6" ry="6" x="546" y="144" width="28" height="26" class="combo"/>
 <text x="560" y="157" class="combo tap"><tspan style="font-size: 60%">&amp;Doubble_…</tspan></text>
 </g>
