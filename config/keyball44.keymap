@@ -294,6 +294,16 @@
             bindings = <&Doubble_Line_Break_Macro>;
             key-positions = <30 31>;
         };
+
+        Bottom_of_Page {
+            bindings = <&kp LC(END)>;
+            key-positions = <8 9>;
+        };
+
+        Start_Of_Page {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <7 8>;
+        };
     };
 
     behaviors {
