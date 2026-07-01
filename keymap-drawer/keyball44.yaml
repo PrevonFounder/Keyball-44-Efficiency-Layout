@@ -420,3 +420,7 @@ combos:
   k: {t: CMK-DH+, h: toggle}
 - p: [30, 31]
   k: '&Doubble_Line_Break_Macro'
+- p: [8, 9]
+  k: Ctl+END
+- p: [7, 8]
+  k: Ctl+HOME
