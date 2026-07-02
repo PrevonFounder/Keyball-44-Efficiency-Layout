@@ -817,6 +817,10 @@ rect.held, rect.combo.held {
 <tspan x="616" dy="-0.6em">Ctl+</tspan><tspan x="616" dy="1.2em">HOME</tspan>
 </text>
 </g>
+<g class="combo combopos-54">
+<rect rx="6" ry="6" x="686" y="113" width="28" height="26" class="combo"/>
+<text x="700" y="126" class="combo tap">Ctl+C</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 370)" class="layer-NUM">
@@ -1323,6 +1327,10 @@ rect.held, rect.combo.held {
 <text x="616" y="34" class="combo tap">
 <tspan x="616" dy="-0.6em">Ctl+</tspan><tspan x="616" dy="1.2em">HOME</tspan>
 </text>
+</g>
+<g class="combo combopos-54">
+<rect rx="6" ry="6" x="686" y="113" width="28" height="26" class="combo"/>
+<text x="700" y="126" class="combo tap">Ctl+C</text>
 </g>
 </g>
 </g>
@@ -1836,6 +1844,10 @@ rect.held, rect.combo.held {
 <text x="616" y="34" class="combo tap">
 <tspan x="616" dy="-0.6em">Ctl+</tspan><tspan x="616" dy="1.2em">HOME</tspan>
 </text>
+</g>
+<g class="combo combopos-54">
+<rect rx="6" ry="6" x="686" y="113" width="28" height="26" class="combo"/>
+<text x="700" y="126" class="combo tap">Ctl+C</text>
 </g>
 </g>
 </g>
@@ -2351,6 +2363,10 @@ rect.held, rect.combo.held {
 <tspan x="616" dy="-0.6em">Ctl+</tspan><tspan x="616" dy="1.2em">HOME</tspan>
 </text>
 </g>
+<g class="combo combopos-54">
+<rect rx="6" ry="6" x="686" y="113" width="28" height="26" class="combo"/>
+<text x="700" y="126" class="combo tap">Ctl+C</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1480)" class="layer-MOUSE">
@@ -2860,6 +2876,10 @@ rect.held, rect.combo.held {
 <tspan x="616" dy="-0.6em">Ctl+</tspan><tspan x="616" dy="1.2em">HOME</tspan>
 </text>
 </g>
+<g class="combo combopos-54">
+<rect rx="6" ry="6" x="686" y="113" width="28" height="26" class="combo"/>
+<text x="700" y="126" class="combo tap">Ctl+C</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1850)" class="layer-SCROLL">
@@ -3367,6 +3387,10 @@ rect.held, rect.combo.held {
 <tspan x="616" dy="-0.6em">Ctl+</tspan><tspan x="616" dy="1.2em">HOME</tspan>
 </text>
 </g>
+<g class="combo combopos-54">
+<rect rx="6" ry="6" x="686" y="113" width="28" height="26" class="combo"/>
+<text x="700" y="126" class="combo tap">Ctl+C</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 2220)" class="layer-SNIPE">
@@ -3869,6 +3893,10 @@ rect.held, rect.combo.held {
 <text x="616" y="34" class="combo tap">
 <tspan x="616" dy="-0.6em">Ctl+</tspan><tspan x="616" dy="1.2em">HOME</tspan>
 </text>
+</g>
+<g class="combo combopos-54">
+<rect rx="6" ry="6" x="686" y="113" width="28" height="26" class="combo"/>
+<text x="700" y="126" class="combo tap">Ctl+C</text>
 </g>
 </g>
 </g>

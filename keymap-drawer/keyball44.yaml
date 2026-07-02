@@ -424,3 +424,5 @@ combos:
   k: Ctl+END
 - p: [7, 8]
   k: Ctl+HOME
+- p: [21, 33]
+  k: Ctl+C
