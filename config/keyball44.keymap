@@ -304,6 +304,11 @@
             bindings = <&kp LC(HOME)>;
             key-positions = <7 8>;
         };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <21 33>;
+        };
     };
 
     behaviors {
