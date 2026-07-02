@@ -430,6 +430,13 @@
             bindings = <&none &kp LS(H) &kp E &kp R &kp E &kp SPACE &kp I &kp S &kp SPACE &kp W &kp H &kp A &kp T &kp SPACE &kp LS(K) &kp I &kp L &kp O &kp SPACE &kp S &kp A &kp I &kp D>;
             label = "KILO_DID_MCRO";
         };
+
+        Left_Click_and_Scroll: Left_Click_and_Scroll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &kp LC(END)>;
+            label = "LEFT_CLICK_AND_SCROLL";
+        };
     };
 
     keymap {
