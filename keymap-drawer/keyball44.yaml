@@ -92,39 +92,39 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   SYM:
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - <
-  - '>'
-  - $$mdi:bluetooth-off$$
-  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - _
-  - +
-  - (
-  - )
-  - {t: \, s: '|'}
-  - {t: '-', s: _}
-  - {t: '=', s: +}
+  - {t: ;, s: ':'}
   - {t: '[', s: '{'}
+  - <
+  - {t: \, s: '|'}
+  - {t: '=', s: +}
+  - '#'
+  - '|'
+  - '>'
   - {t: ']', s: '}'}
-  - {t: '''', s: '"'}
-  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - '~'
+  - $$mdi:bluetooth-off$$
+  - _
+  - '*'
+  - '@'
+  - $
+  - (
+  - +
+  - ^
+  - )
+  - '%'
+  - '!'
+  - '&'
+  - {t: '-', s: _}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - ':'
+  - {t: '''', s: '"'}
+  - '{'
+  - {t: '`', s: '~'}
+  - {t: /, s: '?'}
+  - '}'
+  - '"'
+  - '?'
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
