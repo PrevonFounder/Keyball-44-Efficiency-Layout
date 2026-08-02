@@ -465,10 +465,10 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&bt BT_SEL 2    &kp SEMI      &kp LEFT_BRACKET  &kp LESS_THAN  &kp BACKSLASH         &kp EQUAL              &kp HASH   &kp PIPE               &kp GREATER_THAN   &kp RIGHT_BRACKET  &kp TILDE      &bt BT_CLR
-&kp UNDERSCORE  &kp ASTERISK  &kp AT_SIGN       &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp PLUS               &kp CARET  &kp RIGHT_PARENTHESIS  &kp PERCENT        &kp EXCLAMATION    &kp AMPERSAND  &kp MINUS
-&bt BT_SEL 3    &trans        &kp COLON         &kp SQT        &kp LEFT_BRACE        &kp GRAVE              &kp FSLH   &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp QUESTION       &trans         &bt BT_NXT
-&trans          &trans        &trans            &trans         &trans                               &trans  &trans                                                                                 &trans
+&bt BT_SEL 2    &kp SEMI      &kp LEFT_BRACKET  &kp LESS_THAN  &kp BACKSLASH         &kp EQUAL              &kp HASH   &kp PIPE               &kp GREATER_THAN   &kp RIGHT_BRACKET  &kp TILDE  &bt BT_CLR
+&kp UNDERSCORE  &kp ASTERISK  &kp AT_SIGN       &kp DOLLAR     &kp LEFT_PARENTHESIS  &kp PLUS               &kp CARET  &kp RIGHT_PARENTHESIS  &kp PERCENT        &kp EXCLAMATION    &kp MINUS  &kp AMPS
+&bt BT_SEL 3    &trans        &kp COLON         &kp SQT        &kp LEFT_BRACE        &kp GRAVE              &kp FSLH   &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp QUESTION       &trans     &bt BT_NXT
+&trans          &trans        &trans            &trans         &trans                               &trans  &trans                                                                             &trans
             >;
         };
 
