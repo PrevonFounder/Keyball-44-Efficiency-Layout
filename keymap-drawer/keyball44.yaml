@@ -113,8 +113,8 @@ layers:
   - )
   - '%'
   - '!'
-  - '&'
   - {t: '-', s: _}
+  - '&'
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - ':'
