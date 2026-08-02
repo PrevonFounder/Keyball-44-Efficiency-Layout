@@ -462,13 +462,13 @@
             >;
         };
 
-        symbol_layer {
+symbol_layer {
             label = "SYM";
-            bindings = <
-&bt BT_SEL 2  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH              &kp DOLLAR             &kp PERCENT                &kp CARET  &kp AMPERSAND  &kp ASTERISK      &kp LESS_THAN      &kp GREATER_THAN  &bt BT_CLR
-&bt BT_SEL 4  &kp UNDERSCORE   &kp PLUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH              &kp MINUS  &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SQT           &bt BT_NXT
-&bt BT_SEL 3  &trans           &trans       &trans                &trans                 &trans                     &trans     &trans         &trans            &trans             &trans            &bt BT_PRV
-&trans        &trans           &trans       &trans                &trans                                    &trans  &trans                                                                           &trans
+            bindings = 
+&bt BT_SEL 2  &kp SEMI      &kp LEFT_BRACKET  &kp LESS_THAN     &kp BACKSLASH         &kp EQUAL              &kp HASH   &kp PIPE   &kp GREATER_THAN  &kp RIGHT_BRACKET  &kp TILDE  &bt BT_CLR
+&kp UNDERSCORE  &kp ASTERISK  &kp AT_SIGN       &kp DOLLAR        &kp LEFT_PARENTHESIS  &kp PLUS               &kp CARET  &kp RIGHT_PARENTHESIS  &kp PERCENT  &kp EXCLAMATION  &kp AMPERSAND  &kp MINUS
+&bt BT_SEL 3  &trans        &kp COLON         &kp SQT           &kp LEFT_BRACE        &kp GRAVE              &kp FSLH   &kp RIGHT_BRACE  &kp DOUBLE_QUOTES  &kp QUESTION       &trans     &bt BT_PRV
+&trans        &trans        &trans            &trans            &trans                                    &trans      &trans                                                              &trans
             >;
         };
 
