@@ -465,9 +465,9 @@
 symbol_layer {
             label = "SYM";
             bindings = 
-&bt BT_NXT    &kp EXCLAMATION  &kp AT_SIGN      &kp HASH          &kp DOLLAR        &kp PERCENT              &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&bt BT_SEL 4  &kp SQT          &kp DOUBLE_QUOTES  &kp MINUS       &kp UNDERSCORE    &kp FSLH                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp COLON  &kp PLUS  &trans
-&bt BT_SEL 3  &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE                &kp GRAVE     &kp PIPE       &kp BACKSLASH  &kp SEMI          &kp QUESTION       &trans
+&bt BT_SEL 2  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH          &kp DOLLAR        &kp PERCENT              &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &bt BT_CLR
+&bt BT_SEL 4  &kp SQT          &kp DOUBLE_QUOTES  &kp MINUS       &kp UNDERSCORE    &kp FSLH                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp COLON  &kp PLUS  &bt BT_NXT
+&bt BT_SEL 3  &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE                &kp GRAVE     &kp PIPE       &kp BACKSLASH  &kp SEMI          &kp QUESTION       &bt BT_PRV
 &trans        &trans           &trans           &trans            &trans                                    &trans        &trans                                                             &trans
             >;
         };
