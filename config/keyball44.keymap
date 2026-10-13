@@ -15,13 +15,13 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &lt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <275>;
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
 
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <275>;
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
@@ -316,7 +316,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_SPACE";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <275>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             retro-tap;
@@ -345,7 +345,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <275>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
