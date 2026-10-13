@@ -100,11 +100,6 @@
             key-positions = <42 21>;
         };
 
-        Paste {
-            bindings = <&kp LC(V)>;
-            key-positions = <16 15>;
-        };
-
         No_Format_Paste {
             bindings = <&kp LC(LS(V))>;
             key-positions = <16 15 14>;
