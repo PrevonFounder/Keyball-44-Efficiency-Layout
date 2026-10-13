@@ -342,8 +342,6 @@ combos:
   k: {t: V, h: '$$mdi:apple-keyboard-command$$'}
 - p: [42, 21]
   k: Ctl+W
-- p: [16, 15]
-  k: Ctl+V
 - p: [16, 15, 14]
   k: Ctl+Sft+V
 - p: [17, 16]
