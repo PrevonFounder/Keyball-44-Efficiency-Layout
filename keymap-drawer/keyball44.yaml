@@ -480,7 +480,7 @@ combos:
   k: Gui+Sft+T
   l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [39, 38]
-  k: Gui+$$mdi:keyboard-space$$
+  k: Gui+Sft+V
   l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [42, 21]
   k: Gui+W
