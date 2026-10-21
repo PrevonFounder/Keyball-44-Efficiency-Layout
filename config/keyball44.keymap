@@ -5,6 +5,9 @@
 #define MOUSE    4
 #define SCROLL   5
 #define SNIPE    6
+#define WIN      7
+#define WSCROLL  8
+#define WFUN     9
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
@@ -15,13 +18,13 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &lt {
-    tapping-term-ms = <275>;
+    tapping-term-ms = <200>;
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
 
 &mt {
-    tapping-term-ms = <275>;
+    tapping-term-ms = <200>;
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
@@ -35,19 +38,22 @@
         Page_Refresh {
             timeout-ms = <50>;
             key-positions = <32 20>; // E and I keys
-            bindings = <&kp LC(R)>;
+            bindings = <&kp LG(R)>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Page_Backwards {
             timeout-ms = <50>;
             key-positions = <19 31>; // N and E keys
-            bindings = <&kp LA(LEFT)>;
+            bindings = <&kp LG(LEFT_BRACKET)>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Page_Forward {
             timeout-ms = <50>;
             key-positions = <33 21>; // N, E, and I keys
-            bindings = <&kp LA(RIGHT)>;
+            bindings = <&kp LG(RIGHT_BRACKET)>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Number_Layer_Lock {
@@ -58,6 +64,7 @@
         Scroll_Layer_Lock {
             bindings = <&tog 5>;
             key-positions = <10 22>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Symbol_Layer_Lock {
@@ -81,33 +88,39 @@
         };
 
         New_Tab {
-            bindings = <&kp LC(T)>;
+            bindings = <&kp LG(T)>;
             key-positions = <42 20>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Reopen_Closed_Tab {
-            bindings = <&kp LC(LS(T))>;
+            bindings = <&kp LG(LS(T))>;
             key-positions = <42 22>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Clipboard {
-            bindings = <&kp LG(V)>;
+            bindings = <&kp LG(SPACE)>;
             key-positions = <39 38>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Close_Tab {
-            bindings = <&kp LC(W)>;
+            bindings = <&kp LG(W)>;
             key-positions = <42 21>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         No_Format_Paste {
-            bindings = <&kp LC(LS(V))>;
+            bindings = <&kp LG(LA(LS(V)))>;
             key-positions = <16 15 14>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Cut {
-            bindings = <&kp LC(X)>;
+            bindings = <&kp LG(X)>;
             key-positions = <17 16>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Snipe_Layer_Lock {
@@ -116,13 +129,15 @@
         };
 
         Window_Right {
-            bindings = <&kp LA(TAB)>;
+            bindings = <&kp LG(TAB)>;
             key-positions = <31 32 33>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Window_Left {
-            bindings = <&kp LA(LS(TAB))>;
+            bindings = <&kp LG(LS(TAB))>;
             key-positions = <7 8 9>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Tab_Right {
@@ -176,8 +191,9 @@
         };
 
         Window_Task_View {
-            bindings = <&kp LG(TAB)>;
+            bindings = <&kp LC(UP)>;
             key-positions = <21 20>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Layer_Reset_RH {
@@ -246,8 +262,9 @@
         };
 
         Ctrl_Enter {
-            bindings = <&kp LC(ENTER)>;
+            bindings = <&kp LG(ENTER)>;
             key-positions = <19 41 42>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Tripple_Click_Macro_LH {
@@ -261,23 +278,27 @@
         };
 
         Lock_Screen {
-            bindings = <&kp LG(L)>;
+            bindings = <&kp LC(LG(Q))>;
             key-positions = <11 10>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         RH_Paste {
-            bindings = <&kp LC(V)>;
+            bindings = <&kp LG(V)>;
             key-positions = <22 34>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         RH_Copy {
-            bindings = <&kp LC(C)>;
+            bindings = <&kp LG(C)>;
             key-positions = <22 23>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Ctrl_A_Select_All {
-            bindings = <&kp LC(A)>;
+            bindings = <&kp LG(A)>;
             key-positions = <18 19>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Layer_Lock_Reset {
@@ -291,18 +312,155 @@
         };
 
         Bottom_of_Page {
-            bindings = <&kp LC(END)>;
+            bindings = <&kp LG(DOWN)>;
             key-positions = <8 9>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         Start_Of_Page {
-            bindings = <&kp LC(HOME)>;
+            bindings = <&kp LG(UP)>;
             key-positions = <7 8>;
+            layers = <0 1 2 3 4 5 6>;
         };
 
         copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <21 33>;
+            layers = <0 1 2 3 4 5 6>;
+        };
+
+        Windows_Mode_Toggle {
+            bindings = <&tog 7>;
+            key-positions = <0 11>;
+        };
+
+        Page_Refresh_Win {
+            timeout-ms = <50>;
+            key-positions = <32 20>; // E and I keys
+            bindings = <&kp LC(R)>;
+            layers = <7 8 9>;
+        };
+
+        Page_Backwards_Win {
+            timeout-ms = <50>;
+            key-positions = <19 31>; // N and E keys
+            bindings = <&kp LA(LEFT)>;
+            layers = <7 8 9>;
+        };
+
+        Page_Forward_Win {
+            timeout-ms = <50>;
+            key-positions = <33 21>; // N, E, and I keys
+            bindings = <&kp LA(RIGHT)>;
+            layers = <7 8 9>;
+        };
+
+        Scroll_Layer_Lock_Win {
+            bindings = <&tog 8>;
+            key-positions = <10 22>;
+            layers = <7 8 9>;
+        };
+
+        New_Tab_Win {
+            bindings = <&kp LC(T)>;
+            key-positions = <42 20>;
+            layers = <7 8 9>;
+        };
+
+        Reopen_Closed_Tab_Win {
+            bindings = <&kp LC(LS(T))>;
+            key-positions = <42 22>;
+            layers = <7 8 9>;
+        };
+
+        Clipboard_Win {
+            bindings = <&kp LG(V)>;
+            key-positions = <39 38>;
+            layers = <7 8 9>;
+        };
+
+        Close_Tab_Win {
+            bindings = <&kp LC(W)>;
+            key-positions = <42 21>;
+            layers = <7 8 9>;
+        };
+
+        No_Format_Paste_Win {
+            bindings = <&kp LC(LS(V))>;
+            key-positions = <16 15 14>;
+            layers = <7 8 9>;
+        };
+
+        Cut_Win {
+            bindings = <&kp LC(X)>;
+            key-positions = <17 16>;
+            layers = <7 8 9>;
+        };
+
+        Window_Right_Win {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <31 32 33>;
+            layers = <7 8 9>;
+        };
+
+        Window_Left_Win {
+            bindings = <&kp LA(LS(TAB))>;
+            key-positions = <7 8 9>;
+            layers = <7 8 9>;
+        };
+
+        Window_Task_View_Win {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <21 20>;
+            layers = <7 8 9>;
+        };
+
+        Ctrl_Enter_Win {
+            bindings = <&kp LC(ENTER)>;
+            key-positions = <19 41 42>;
+            layers = <7 8 9>;
+        };
+
+        Lock_Screen_Win {
+            bindings = <&kp LG(L)>;
+            key-positions = <11 10>;
+            layers = <7 8 9>;
+        };
+
+        RH_Paste_Win {
+            bindings = <&kp LC(V)>;
+            key-positions = <22 34>;
+            layers = <7 8 9>;
+        };
+
+        RH_Copy_Win {
+            bindings = <&kp LC(C)>;
+            key-positions = <22 23>;
+            layers = <7 8 9>;
+        };
+
+        Ctrl_A_Select_All_Win {
+            bindings = <&kp LC(A)>;
+            key-positions = <18 19>;
+            layers = <7 8 9>;
+        };
+
+        Bottom_of_Page_Win {
+            bindings = <&kp LC(END)>;
+            key-positions = <8 9>;
+            layers = <7 8 9>;
+        };
+
+        Start_Of_Page_Win {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <7 8>;
+            layers = <7 8 9>;
+        };
+
+        copy_Win {
             bindings = <&kp LC(C)>;
             key-positions = <21 33>;
+            layers = <7 8 9>;
         };
     };
 
@@ -311,7 +469,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_SPACE";
             #binding-cells = <2>;
-            tapping-term-ms = <275>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             retro-tap;
@@ -340,7 +498,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <275>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
             flavor = "tap-preferred";
@@ -429,7 +587,7 @@
         Left_Click_and_Scroll: Left_Click_and_Scroll {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mkp LCLK &kp LC(END)>;
+            bindings = <&mkp LCLK &kp LG(DOWN)>;
             label = "LEFT_CLICK_AND_SCROLL";
         };
     };
@@ -440,10 +598,10 @@
         default_layer {
             label = "CMK-DH+";
             bindings = <
-&mt LC(LS(TAB)) LC(LG(LEFT))  &kp Q            &kp W        &kp F        &kp P         &kp B                             &kp J                        &kp L  &kp U      &kp Y       &mt CAPSLOCK TAB        &mt LC(TAB) LC(LG(RIGHT))
+&mt LC(LS(TAB)) LC(LEFT)  &kp Q            &kp W        &kp F        &kp P         &kp B                             &kp J                        &kp L  &kp U      &kp Y       &mt CAPSLOCK TAB        &mt LC(TAB) LC(RIGHT)
 &kp DOUBLE_QUOTES             &kp A            &lt 6 R      &lt 5 S      &kp T         &kp G                             &kp M                        &kp N  &lt 5 E    &lt 6 I     &kp O                   &lt 5 COLON
-&mt LS(LG(T)) PRINTSCREEN     &kp Z            &kp X        &kp C        &kp D         &kp V                             &kp K                        &kp H  &kp COMMA  &kp PERIOD  &mt KP_DIVIDE QUESTION  &lt 3 LC(F)
-&mt LC(LS(S)) LS(LC(D))       &mt LC(Y) LC(Z)  &lt 2 LC(C)  &lt 1 SPACE  &lt 6 ESCAPE             &mt LC(DELETE) DELETE  &mt LC(BACKSPACE) BACKSPACE                                                        &caps_word
+&mt LG(LS(N5)) LG(LS(N4))     &kp Z            &kp X        &kp C        &kp D         &kp V                             &kp K                        &kp H  &kp COMMA  &kp PERIOD  &mt KP_DIVIDE QUESTION  &lt 3 LG(F)
+&mt LG(LS(S)) LG(LS(D))       &mt LG(LS(Z)) LG(Z)  &lt 2 LG(C)  &lt 1 SPACE  &lt 6 ESCAPE             &mt LA(DELETE) DELETE  &mt LA(BACKSPACE) BACKSPACE                                                        &caps_word
             >;
         };
 
@@ -473,7 +631,7 @@
 &trans  &kp F1  &kp F2   &kp F3    &kp F4       &trans                     &trans   &kp C_BRIGHTNESS_INC      &kp C_VOLUME_UP  &ext_power EP_ON   &trans      &trans
 &trans  &kp F5  &kp F6   &kp F7    &kp F8       &trans                     &trans   &kp C_BRIGHTNESS_DEC      &kp C_VOL_DN     &ext_power EP_OFF  &kp K_LOCK  &trans
 &trans  &kp F9  &kp F10  &kp F11   &kp F12      &trans                     &trans   &kp C_BRIGHTNESS_MINIMUM  &kp K_MUTE       &ext_power EP_TOG  &trans      &trans
-&trans  &trans  &trans   &kp HOME  &kt PAGE_UP              &kp PAGE_DOWN  &kp END                                                                            &trans
+&trans  &trans  &trans   &kp LG(LEFT)  &kt PAGE_UP              &kp PAGE_DOWN  &kp LG(RIGHT)                                                                            &trans
             >;
         };
 
@@ -491,7 +649,7 @@
             label = "SCROLL";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans        &trans  &trans       &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &kp LC(HOME)  &trans  &kp LC(END)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans  &kp LG(UP)  &trans  &kp LG(DOWN)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans        &trans  &trans       &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans                                             &trans
             >;
@@ -504,6 +662,36 @@
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
+            >;
+        };
+
+        windows_layer {
+            label = "WIN";
+            bindings = <
+&mt LC(LS(TAB)) LC(LG(LEFT))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LC(TAB) LC(LG(RIGHT))
+&trans  &trans  &trans  &lt 8 S  &trans  &trans  &trans  &trans  &lt 8 E  &trans  &trans  &lt 8 COLON
+&mt LS(LG(T)) PRINTSCREEN  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &lt 9 LC(F)
+&mt LC(LS(S)) LS(LC(D))  &mt LC(Y) LC(Z)  &lt 2 LC(C)  &trans  &trans  &mt LC(DELETE) DELETE  &mt LC(BACKSPACE) BACKSPACE  &trans
+            >;
+        };
+
+        windows_scroll_layer {
+            label = "WSCROLL";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(HOME)  &trans  &kp LC(END)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        windows_function_layer {
+            label = "WFUN";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp HOME  &kt PAGE_UP  &kp PAGE_DOWN  &kp END  &trans
             >;
         };
     };
