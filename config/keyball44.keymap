@@ -100,7 +100,7 @@
         };
 
         Clipboard {
-            bindings = <&kp LG(SPACE)>;
+            bindings = <&kp LG(LS(V))>;
             key-positions = <39 38>;
             layers = <0 1 2 3 4 5 6>;
         };
