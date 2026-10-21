@@ -1,0 +1,2 @@
+zephyr_library()
+zephyr_library_sources_ifdef(CONFIG_ZMK_BLE_EXCLUSIVE_PROFILE src/ble_exclusive_profile.c)

@@ -1,0 +1,9 @@
+config ZMK_BLE_EXCLUSIVE_PROFILE
+    bool "Keep only the active Bluetooth profile connected"
+    default y
+    depends on ZMK_BLE && (!ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL)
+    help
+      ZMK keeps every previously connected host connected after a profile switch.
+      Several live host links compete with the split link for radio time and make
+      the keyboard and trackball lag. This disconnects every non-active profile once
+      the active profile is connected.
