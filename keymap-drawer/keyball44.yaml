@@ -460,17 +460,9 @@ combos:
 - p: [33, 21]
   k: Gui+]
   l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
-- p: [4, 7]
-  k: {t: NUM, h: toggle}
 - p: [10, 22]
   k: {t: SCROLL, h: toggle}
   l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
-- p: [9, 2]
-  k: {t: SYM, h: toggle}
-- p: [10, 1]
-  k: {t: FUN, h: toggle}
-- p: [8, 3]
-  k: {t: MOUSE, h: toggle}
 - p: [6, 5]
   k: {t: CMK-DH+, h: toggle}
 - p: [42, 20]
