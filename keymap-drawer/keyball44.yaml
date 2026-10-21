@@ -25,7 +25,7 @@ layers:
   - {t: I, h: SNIPE}
   - O
   - {t: ':', h: SCROLL}
-  - {t: Gui+Sft+4, h: Gui+Sft+5, s: Gui+Sft+$}
+  - {t: Gui+Ctl+Sft+4, h: Gui+Sft+5, s: Gui+Ctl+Sft+$}
   - Z
   - X
   - C
