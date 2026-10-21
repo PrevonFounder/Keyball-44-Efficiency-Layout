@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: keyball44}
 layers:
   CMK-DH+:
-  - {t: 'Ctl+Gui+$$mdi:arrow-left-bold$$', h: 'Ctl+Sft+$$mdi:keyboard-tab$$'}
+  - {t: 'Ctl+$$mdi:arrow-left-bold$$', h: 'Ctl+Sft+$$mdi:keyboard-tab$$'}
   - Q
   - W
   - F
@@ -12,7 +12,7 @@ layers:
   - U
   - Y
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-caps$$'}
-  - {t: 'Ctl+Gui+$$mdi:arrow-right-bold$$', h: 'Ctl+$$mdi:keyboard-tab$$'}
+  - {t: 'Ctl+$$mdi:arrow-right-bold$$', h: 'Ctl+$$mdi:keyboard-tab$$'}
   - '"'
   - A
   - {t: R, h: SNIPE}
@@ -25,7 +25,7 @@ layers:
   - {t: I, h: SNIPE}
   - O
   - {t: ':', h: SCROLL}
-  - {t: PRINTSCREEN, h: Sft+Gui+T}
+  - {t: Gui+Sft+4, h: Gui+Sft+5, s: Gui+Sft+$}
   - Z
   - X
   - C
@@ -36,14 +36,14 @@ layers:
   - {t: ',', s: <}
   - .
   - {t: '?', h: KP DIVIDE}
-  - {t: Ctl+F, h: FUN}
-  - {t: Sft+Ctl+D, h: Ctl+Sft+S}
-  - {t: Ctl+Z, h: Ctl+Y}
-  - {t: Ctl+C, h: SYM}
+  - {t: F, h: FUN}
+  - {t: Gui+Sft+D, h: Gui+Sft+S}
+  - {t: Z, h: Gui+Sft+Z}
+  - {t: C, h: SYM}
   - {t: '$$mdi:keyboard-space$$', h: NUM}
   - {t: '$$mdi:keyboard-esc$$', h: SNIPE}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: 'Ctl+$$mdi:backspace-reverse-outline$$'}
-  - {t: '$$mdi:backspace$$', h: 'Ctl+$$mdi:backspace$$'}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: 'Alt+$$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:backspace$$', h: 'Alt+$$mdi:backspace$$'}
   - $$mdi:alpha-w-box$$
   NUM:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -175,10 +175,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
+  - Gui+$$mdi:arrow-left-bold$$
   - {t: PgUp, h: toggle}
   - PgDn
-  - END
+  - Gui+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -245,9 +245,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+HOME
+  - Gui+$$mdi:arrow-up-bold$$
   - {type: held alternate}
-  - Ctl+END
+  - Gui+$$mdi:arrow-down-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -315,17 +315,156 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  WIN:
+  - {t: 'Ctl+Gui+$$mdi:arrow-left-bold$$', h: 'Ctl+Sft+$$mdi:keyboard-tab$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Ctl+Gui+$$mdi:arrow-right-bold$$', h: 'Ctl+$$mdi:keyboard-tab$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: S, h: WSCROLL}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: E, h: WSCROLL}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ':', h: WSCROLL}
+  - {t: PRINTSCREEN, h: Sft+Gui+T}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Ctl+F, h: WFUN}
+  - {t: Sft+Ctl+D, h: Ctl+Sft+S}
+  - {t: Ctl+Z, h: Ctl+Y}
+  - {t: Ctl+C, h: SYM}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: 'Ctl+$$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:backspace$$', h: 'Ctl+$$mdi:backspace$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  WSCROLL:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+HOME
+  - {type: held alternate}
+  - Ctl+END
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  WFUN:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - HOME
+  - {t: PgUp, h: toggle}
+  - PgDn
+  - END
+  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [32, 20]
-  k: Ctl+R
+  k: Gui+R
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [19, 31]
-  k: Alt+$$mdi:arrow-left-bold$$
+  k: Gui+[
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [33, 21]
-  k: Alt+$$mdi:arrow-right-bold$$
+  k: Gui+]
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [4, 7]
   k: {t: NUM, h: toggle}
 - p: [10, 22]
   k: {t: SCROLL, h: toggle}
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [9, 2]
   k: {t: SYM, h: toggle}
 - p: [10, 1]
@@ -335,23 +474,31 @@ combos:
 - p: [6, 5]
   k: {t: CMK-DH+, h: toggle}
 - p: [42, 20]
-  k: Ctl+T
+  k: Gui+T
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [42, 22]
-  k: Ctl+Sft+T
+  k: Gui+Sft+T
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [39, 38]
-  k: {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  k: Gui+$$mdi:keyboard-space$$
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [42, 21]
-  k: Ctl+W
+  k: Gui+W
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [16, 15, 14]
-  k: Ctl+Sft+V
+  k: Gui+Alt+Sft+V
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [17, 16]
-  k: Ctl+X
+  k: {t: X, h: '$$mdi:apple-keyboard-command$$'}
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [35, 43]
   k: {t: SNIPE, h: toggle}
 - p: [31, 32, 33]
-  k: Alt+$$mdi:keyboard-tab$$
+  k: Gui+$$mdi:keyboard-tab$$
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [7, 8, 9]
-  k: Alt+Sft+$$mdi:keyboard-tab$$
+  k: Gui+Sft+$$mdi:keyboard-tab$$
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [31, 32]
   k: Ctl+$$mdi:keyboard-tab$$
 - p: [7, 8]
@@ -373,7 +520,8 @@ combos:
 - p: [17, 5]
   k: $$mdi:apple-keyboard-command$$
 - p: [21, 20]
-  k: Gui+$$mdi:keyboard-tab$$
+  k: Ctl+$$mdi:arrow-up-bold$$
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [22, 21]
   k: {t: CMK-DH+, h: toggle}
 - p: [13, 14]
@@ -401,26 +549,99 @@ combos:
 - p: [42, 18]
   k: {t: 'Sft+$$mdi:keyboard-return$$', type: enter}
 - p: [19, 41, 42]
-  k: {t: 'Ctl+$$mdi:keyboard-return$$', type: enter}
+  k: {t: 'Gui+$$mdi:keyboard-return$$', type: enter}
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [2, 3]
   k: '&Tripple_Click_Macro'
 - p: [15, 14]
   k: '&Double_Click_Macro'
 - p: [11, 10]
-  k: Gui+L
+  k: Ctl+Gui+Q
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [22, 34]
-  k: Ctl+V
+  k: {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [22, 23]
-  k: Ctl+C
+  k: {t: C, h: '$$mdi:apple-keyboard-command$$'}
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [18, 19]
-  k: Ctl+A
+  k: {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
 - p: [6, 7]
   k: {t: CMK-DH+, h: toggle}
 - p: [30, 31]
   k: '&Doubble_Line_Break_Macro'
 - p: [8, 9]
+  k: Gui+$$mdi:arrow-down-bold$$
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
+- p: [7, 8]
+  k: Gui+$$mdi:arrow-up-bold$$
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
+- p: [21, 33]
+  k: {t: C, h: '$$mdi:apple-keyboard-command$$'}
+  l: [CMK-DH+, NUM, SYM, FUN, MOUSE, SCROLL, SNIPE]
+- p: [0, 11]
+  k: {t: WIN, h: toggle}
+- p: [32, 20]
+  k: Ctl+R
+  l: [WIN, WSCROLL, WFUN]
+- p: [19, 31]
+  k: Alt+$$mdi:arrow-left-bold$$
+  l: [WIN, WSCROLL, WFUN]
+- p: [33, 21]
+  k: Alt+$$mdi:arrow-right-bold$$
+  l: [WIN, WSCROLL, WFUN]
+- p: [10, 22]
+  k: {t: WSCROLL, h: toggle}
+  l: [WIN, WSCROLL, WFUN]
+- p: [42, 20]
+  k: Ctl+T
+  l: [WIN, WSCROLL, WFUN]
+- p: [42, 22]
+  k: Ctl+Sft+T
+  l: [WIN, WSCROLL, WFUN]
+- p: [39, 38]
+  k: {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  l: [WIN, WSCROLL, WFUN]
+- p: [42, 21]
+  k: Ctl+W
+  l: [WIN, WSCROLL, WFUN]
+- p: [16, 15, 14]
+  k: Ctl+Sft+V
+  l: [WIN, WSCROLL, WFUN]
+- p: [17, 16]
+  k: Ctl+X
+  l: [WIN, WSCROLL, WFUN]
+- p: [31, 32, 33]
+  k: Alt+$$mdi:keyboard-tab$$
+  l: [WIN, WSCROLL, WFUN]
+- p: [7, 8, 9]
+  k: Alt+Sft+$$mdi:keyboard-tab$$
+  l: [WIN, WSCROLL, WFUN]
+- p: [21, 20]
+  k: Gui+$$mdi:keyboard-tab$$
+  l: [WIN, WSCROLL, WFUN]
+- p: [19, 41, 42]
+  k: {t: 'Ctl+$$mdi:keyboard-return$$', type: enter}
+  l: [WIN, WSCROLL, WFUN]
+- p: [11, 10]
+  k: Gui+L
+  l: [WIN, WSCROLL, WFUN]
+- p: [22, 34]
+  k: Ctl+V
+  l: [WIN, WSCROLL, WFUN]
+- p: [22, 23]
+  k: Ctl+C
+  l: [WIN, WSCROLL, WFUN]
+- p: [18, 19]
+  k: Ctl+A
+  l: [WIN, WSCROLL, WFUN]
+- p: [8, 9]
   k: Ctl+END
+  l: [WIN, WSCROLL, WFUN]
 - p: [7, 8]
   k: Ctl+HOME
+  l: [WIN, WSCROLL, WFUN]
 - p: [21, 33]
   k: Ctl+C
+  l: [WIN, WSCROLL, WFUN]
