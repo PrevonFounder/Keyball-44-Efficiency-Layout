@@ -56,30 +56,10 @@
             layers = <0 1 2 3 4 5 6>;
         };
 
-        Number_Layer_Lock {
-            bindings = <&tog 1>;
-            key-positions = <4 7>;
-        };
-
         Scroll_Layer_Lock {
             bindings = <&tog 5>;
             key-positions = <10 22>;
             layers = <0 1 2 3 4 5 6>;
-        };
-
-        Symbol_Layer_Lock {
-            bindings = <&tog 2>;
-            key-positions = <9 2>;
-        };
-
-        Function_Layer_Lock {
-            bindings = <&tog 3>;
-            key-positions = <10 1>;
-        };
-
-        Mouse_Layer_Lock {
-            bindings = <&tog 4>;
-            key-positions = <8 3>;
         };
 
         To_Default_Layer_0 {
